@@ -1,15 +1,15 @@
 package main
 
 import (
-	"net/http"
 	"github.com/gin-gonic/gin"
+	"net/http"
 )
 
 var db = make(map[string]string)
 
 func setupRouter() *gin.Engine {
-	// Disable Console Color
-	// gin.DisableConsoleColor()
+	// Force log's color
+	gin.ForceConsoleColor()
 	r := gin.Default()
 
 	// Ping test
